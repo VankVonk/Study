@@ -220,11 +220,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38ac17e1714f8c844871fb2bd197cf34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runner1: {fileID: 713486490}
-  runner2: {fileID: 2121990608}
-  runner3: {fileID: 1590630426}
-  runner4: {fileID: 1815622694}
-  runner5: {fileID: 78605517}
+  passDistace: 1.25
+  runn:
+  - {fileID: 713486490}
+  - {fileID: 2121990608}
+  - {fileID: 1590630426}
+  - {fileID: 1815622694}
+  - {fileID: 78605517}
 --- !u!1 &78605513
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +317,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78605513}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 0, z: 100}
+  m_LocalPosition: {x: 18.74, y: 0, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -609,6 +611,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1478e9250c4bd054896d87d6876080b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  points:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0

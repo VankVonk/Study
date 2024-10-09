@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class vectorttt : MonoBehaviour
 {
-    static int n = 12; // кол-во поинтов
-    Vector3[] points = new Vector3[n];
-    int place = 0; 
-
+    
+    public Vector3[] points = new Vector3[12];
+    int place = 0;
+    
     void Start()
     {
+        int n = points.Length;
         int numb;
         for (int i = 0; i < n; i++)
         {
@@ -22,6 +23,7 @@ public class vectorttt : MonoBehaviour
     
     void Update()
     {
+         int n = points.Length;
         if ( place < n)
         {
             transform.position = Vector3.MoveTowards(transform.position, points[place], 0.008f);
