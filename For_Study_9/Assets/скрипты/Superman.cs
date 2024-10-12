@@ -5,12 +5,7 @@ using UnityEngine;
 public class Superman : MonoBehaviour
 {
     public float force = 10f;
-    void Start()
-    {
-        
-    }
-
-   
+  
     void Update()
     {
         
@@ -22,17 +17,12 @@ public class Superman : MonoBehaviour
     {
         Rigidbody body = collision.gameObject.GetComponent<Rigidbody>();
         
-        if (body != null)
-        {
+        
+        
             Vector3 punch_Vec = (collision.transform.position - transform.position).normalized;
 
             body.AddForce(punch_Vec * force, ForceMode.Impulse);
-            
-
-
-        }
-
-       
+      
     }
 }
 

@@ -10,11 +10,6 @@ public class glass_broke : MonoBehaviour
         GetComponent<Rigidbody>().isKinematic = true;
     }
 
-    
-    void Update()
-    {
-        
-    }
     private void OnCollisionEnter(Collision collision)
     {
         GetComponent<Rigidbody>().isKinematic = false;
