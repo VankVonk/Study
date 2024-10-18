@@ -10,41 +10,40 @@ public class NewBehaviourScript : MonoBehaviour
     public float pullDistance = 2f;
     public float releaseDistace = 0.5f;
 
-    private bool isPull = false;
+    private bool isPull = true; // нат€нуто или нет 
     private Vector3 initialPos;
-
+    private Vector3 pullPos;
+    private Rigidbody rb;
+   
     void Start()
     {
         initialPos = transform.position;
-        pullSpring();
+        pullPos = initialPos - new Vector3(0, 0, pullDistance);
+        rb = GetComponent<Rigidbody>();
+        rb.MovePosition(pullPos);
     }
     void Update()
     {
-        if (isPull = true)
+        if (isPull)
         {
-                release_spring(); 
+            rb.MovePosition(pullPos);
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("Ball"))
+        if (collision.gameObject.CompareTag("Ball"))
         {
-            pullSpring();
-            Debug.Log("Ўарик коснулс€");
+            releaseSpring();
+        }
+        else
+        {
+            isPull = true;
         }
     }
-
-    void pullSpring()// нат€гивание
+    void releaseSpring()
     {
-        transform.position = initialPos - Vector3.up * pullDistance;
-        isPull = true;
-    }
-
-    void release_spring() //вытолк
-    {
-        transform.position = initialPos;
         isPull = false;
+        rb.AddForce(Vector3.forward * releaseForce, ForceMode.Impulse);
     }
-    
 }

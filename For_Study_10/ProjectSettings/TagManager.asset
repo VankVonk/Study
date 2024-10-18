@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ball
+  - 20
+  - 10
+  - reset
   layers:
   - Default
   - TransparentFX
